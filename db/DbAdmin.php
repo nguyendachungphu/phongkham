@@ -44,9 +44,9 @@ class DbAdmin extends Db
         return $this->info_login;
     }
 
-    public function getDsLichKhamByBacSyID($bacsy_id)
+    public function getDsLichKhamByBacSyID()
     {
-        $sql = "SELECT * FROM LICHKHAM INNER JOIN BACSY ON LICHKHAM.BACSY_ID = BACSY.BACSY_ID WHERE LICHKHAM.BACSY_ID = {$bacsy_id}";
+        $sql = "SELECT * FROM LICHKHAM INNER JOIN BACSY ON LICHKHAM.BACSY_ID = BACSY.BACSY_ID";
         return $this->raw($sql)->getAll();
     }
 }

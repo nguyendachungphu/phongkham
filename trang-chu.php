@@ -44,8 +44,8 @@ $list_department = $db->getListDepartment();
             'giokham' => $gio_kham,
             'ngaykham' => $ngay_kham,
             'dienthoai_lienlac' => $so_dien_thoai,
-            // 'gmail' => $gmail, // 2 column này s ko có trong db ???
-            // 'ghichu' => $ghi_chu,
+            'gmail' => $gmail, // 2 column này s ko có trong db ???
+            'ghichu' => $ghi_chu,
          );
         if ($db->table('lichkham')->insert($insert) === true) {
             Helper::redirectHome();
